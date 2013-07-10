@@ -9,11 +9,14 @@ import fileinput
 
 
 def main(argv, verbose, targets, lifile, lofile):
-  ifile = open(lifile, 'r')
-  ofile = open(lofile, 'w')
-  print 'Input file is: ', ifile.name
-  print 'Output file is: ', ofile.name
-    
+  try:
+    ifile = open(lifile, 'r')
+    ofile = open(lofile, 'w')
+    print 'Input file is: ', ifile.name
+    print 'Output file is: ', ofile.name
+  except IOError:
+    print 'cannot open'
+
   for n, line in enumerate(ifile):
     for t in targets: 
       if t in line:
@@ -37,8 +40,8 @@ def main(argv, verbose, targets, lifile, lofile):
                     
   ifile.close
   ofile.close
-  print "Done..."
-  return 0
+  print "Done!"
+  sys.exit(0)
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="Preserve capitals in BibTeX file")
