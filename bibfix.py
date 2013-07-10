@@ -1,5 +1,8 @@
 # bibfix.py 
-#  BibTeX bibliography fixer in Python  
+#  BibTeX bibliography fixer in Python
+#  Usage: bibfix.py ifile.bib ofile.bib
+#  TODO: user specified targets using a switch
+#  TODO: option to manipulate file in place
 
 import sys
 import fileinput
