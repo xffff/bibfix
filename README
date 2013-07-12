@@ -1,7 +1,7 @@
 ----------
 bibfix.py:
 ----------
-Quick and simple way to modify a BibTeX bibiography file to preserve capitals
+Quick and simple way to modify a BibTeX bibliography file to preserve capitals
 
 	Usage:
 		python bibfix.py ifile ofile [-v] [[-t] Target1 ... TargetN]
