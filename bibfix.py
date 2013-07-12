@@ -16,6 +16,7 @@ def main(argv, verbose, targets, lifile, lofile):
     print 'Output file is: ', ofile.name
   except IOError:
     print 'cannot open'
+    sys.exit(1)
 
   for n, line in enumerate(ifile):
     for t in targets: 
@@ -29,7 +30,6 @@ def main(argv, verbose, targets, lifile, lofile):
               print 'Line: ', n, ' Found ', temp[i], 'at char ', i
             repstring = '{' + temp[i] + '}'
             temp[i] = repstring
-            # i += 1
           i += 1
         for x in temp:
           newline = newline + x

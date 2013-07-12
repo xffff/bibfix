@@ -1,5 +1,6 @@
+----------
 bibfix.py:
-------------------------------------------------------------------------------------------
+----------
 	Quick and simple way to modify a BibTeX bibiography file to preserve capitals
 
 	Usage:
@@ -9,4 +10,8 @@ bibfix.py:
 		Author =
 		Journal =
 		Booktitle =
+	Example input:
+		Title = {An Article}
+	Example output:
+		Title = {{A}n {A}rticle}
 
